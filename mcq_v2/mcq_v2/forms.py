@@ -5,13 +5,13 @@ User=get_user_model()
 
 
 class signup_form(forms.Form):
-	name=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","id":"defaultForm-name"}))
-	branch=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","id":"defaultForm-branch"}))
-	year=forms.DecimalField(max_value=3,min_value=1,widget=forms.NumberInput(attrs={"class":"form-control","id":"defaultForm-year"}))
-	college=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","id":"defaultForm-college"}))
-	email=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","id":"defaultForm-email"}))
-	password=forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","id":"defaultForm-password"}))
-	confirm_password=forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","id":"defaultForm-confirm_pass"}))
+	name=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"Your Name","id":"defaultForm-name"}))
+	branch=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"CSE/IT/ECE/IC/ME/EE/EEE/CE","id":"defaultForm-branch"}))
+	year=forms.DecimalField(max_value=3,min_value=1,widget=forms.NumberInput(attrs={"class":"form-control","placeholder":"1/2/3/4","id":"defaultForm-year"}))
+	college=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"JSS NOIDA","id":"defaultForm-college"}))
+	email=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"Your email","id":"defaultForm-email"}))
+	password=forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","placeholder":"Your Password","id":"defaultForm-password"}))
+	confirm_password=forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","placeholder":"Confirm Password","id":"defaultForm-confirm_pass"}))
 
 
 	def clean_email(self):
@@ -44,6 +44,6 @@ class signup_form(forms.Form):
 
 
 class login_form(forms.Form):
-	email=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","id":"defaultForm-email"}))
-	password=forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","id":"defaultForm-pass"}))
+	email=forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"Your Email","id":"defaultForm-email"}))
+	password=forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","placeholder":"Your Password","id":"defaultForm-pass"}))
 	
