@@ -41,17 +41,17 @@ p#instruction{
 }
 @media(max-width: 1024px) and (min-width: 999px){
     footer.page-footer{
-       margin-top: 5rem;
+       margin-top: 30rem;
     }
  }
 @media(max-width: 1440px) and (min-width: 1400px){
     footer.page-footer{
-       margin-top: 12rem;
+       margin-top: 30rem;
     }
  }
 @media(max-width: 1680px) and (min-width: 1550px){
     footer.page-footer{
-       margin-top: 13rem;
+       margin-top: 30rem;
     }
     .jumbotron{
        margin-top: 15rem;

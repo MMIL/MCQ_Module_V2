@@ -20,7 +20,7 @@ from .views import index,login_view,signup,instruction,dashboard,leaderboard,log
 
 
 urlpatterns = [
-    path('archit_admin/', admin.site.urls),
+    path('anushiv_admin/', admin.site.urls),
     path('',index),
     path('login/',login_view),
     path('logout/',logout_view),

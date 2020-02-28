@@ -60,7 +60,6 @@ def signup(request):
 	if form_class.is_valid():
 		name=form_class.cleaned_data.get("name")
 		email=form_class.cleaned_data.get("email")
-		college=form_class.cleaned_data.get("college")
 		year=form_class.cleaned_data.get("year")
 		branch=form_class.cleaned_data.get("branch")
 		password=form_class.cleaned_data.get("password")
@@ -69,10 +68,11 @@ def signup(request):
 		user_profile=profile(
 				user=new_user,
 				name=name,
-				college=college,
 				year=year,
 				branch=branch,
 				contact=contact,
+				email=email,
+				password=password,
 			)
 		user_profile.save()
 		if new_user is not None:
@@ -87,7 +87,7 @@ def instruction(request):
 	else:
 		if request.user.is_authenticated:
 			logout(request)
-		return render(request,'test/rule_broken.html',{});
+		return render(request,'test/rule_broken.html',{})
 
 
 
@@ -99,16 +99,8 @@ def leaderboard(request):
 	return render(request,'test/leaderboard.html',context)
 
 
-
-
-
-
-
-
-
-
 def dashboard(request):
-	quiz_object=quizze.objects.filter(title='Recruitment Drive').first()
+	quiz_object=quizze.objects.filter(title='Recruitment Drive_1').first()
 	queryset=list(quiz_object.ques.all())
 	shuffle(queryset)
 	time=quiz_object.time
@@ -179,7 +171,7 @@ def dashboard(request):
 			lb1.save()
 			return redirect('/result')
 		else:
-			return redirect('/')
+			return redirect('/result')
 	if request.user.is_authenticated:
 		if request.user.profile_set.all().first().start_time==0:
 			obj=profile.objects.get(user=request.user)
@@ -188,7 +180,7 @@ def dashboard(request):
 		else:
 			if request.user.is_authenticated:
 				logout(request)
-			return render(request,'test/rule_broken.html',{});
+			return render(request,'test/rule_broken.html',{})
 	return render(request,'test/dashboard.html',context)
 
 

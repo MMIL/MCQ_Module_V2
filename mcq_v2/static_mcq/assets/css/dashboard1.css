@@ -148,15 +148,15 @@ button#b30:focus{
   padding: 1rem;
 }
 .next{
-  background-color: transparent;
+  background-color: green !important;
   padding: 1rem 2rem;
   font-size: 15px;
   margin-top: 5rem;
 
-  border: 2px solid grey;
+  border: 2px solid rgba(58, 231, 15, 0.726);
   border-radius: 6px;
   text-decoration: none;
-  color: grey;
+  color: #fff !important;
   outline: none;
   font-weight: bold;
 }

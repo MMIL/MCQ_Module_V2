@@ -11,12 +11,13 @@ User=get_user_model()
 class profile(models.Model):
 	user=models.ForeignKey(User,on_delete=models.CASCADE)
 	name=models.CharField(max_length=255)
-	college=models.CharField(max_length=255)
 	year=models.IntegerField()
 	branch=models.CharField(max_length=255)
 	start_time=models.IntegerField(default=0)
 	rem_time=models.IntegerField(default=1800)
-	contact=models.IntegerField(null=True,blank=True);
+	contact=models.IntegerField(null=True,blank=True)
+	email=models.EmailField(unique=True,blank=False,null=False,default='shuklanushiv@gmail.com')
+	password=models.CharField(max_length=300,default='qwerty@123')
 
 
 	def __str__(self):
