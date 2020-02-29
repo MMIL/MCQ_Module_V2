@@ -3,6 +3,7 @@ body::-webkit-scrollbar {
 }
  
 body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
  
@@ -27,7 +28,7 @@ body
 }
 .navbar-brand>img {
     display: block;
-    width: 3rem;
+    width: 10rem;
     margin-top: 0.25rem;
     margin-left: 0rem;
 }
