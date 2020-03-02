@@ -100,7 +100,7 @@ def leaderboard(request):
 
 
 def dashboard(request):
-	quiz_object=quizze.objects.filter(title='Recruitment Drive_1').first()
+	quiz_object=quizze.objects.filter(title='Recruitment Drive').first()
 	queryset=list(quiz_object.ques.all())
 	shuffle(queryset)
 	time=quiz_object.time
